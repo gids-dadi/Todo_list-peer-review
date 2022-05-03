@@ -74,7 +74,7 @@ function populate() {
           menuBtn.classList.remove(
             'menu-icon',
             'fa-ellipsis-vertical',
-            `menu-icon${item.index}`
+            `menu-icon${item.index}`,
           );
           menuBtn.classList.add(
             'delete-icon',
