@@ -20,7 +20,7 @@ function populate() {
     populate();
   }
 
- function addListener() {
+  function addListener() {
     const textField = document.querySelector('.add-text');
     textField.addEventListener('keypress', (e) => {
       const textValue = document.getElementById('add-text');
@@ -31,7 +31,7 @@ function populate() {
     });
   }
 
-function deleteTask(id) {
+  function deleteTask(id) {
     listContainer = listContainer.filter((item) => item.index !== id);
     localStorage.setItem('container', JSON.stringify(listContainer));
     populate();
@@ -61,25 +61,24 @@ function deleteTask(id) {
           menuBtn.classList.add(
             'menu-icon',
             'fa-ellipsis-vertical',
-            `menu-icon${item.index}`
+            `menu-icon${item.index}`,
           );
           menuBtn.classList.remove(
             'delete-icon',
             `delete-icon${item.index}`,
-            'fa-trash-can'
-          );
+            'fa-trash-can',
         } else {
           taskDisc.setAttribute('contenteditable', true);
           taskDisc.classList.add('yellowish');
           menuBtn.classList.remove(
             'menu-icon',
             'fa-ellipsis-vertical',
-            `menu-icon${item.index}`
+            `menu-icon${item.index}`,
           );
           menuBtn.classList.add(
             'delete-icon',
             `delete-icon${item.index}`,
-            'fa-trash-can'
+            'fa-trash-can',
           );
         }
       });
@@ -94,12 +93,12 @@ function deleteTask(id) {
         menuBtn.classList.add(
           'menu-icon',
           'fa-ellipsis-vertical',
-          `menu-icon${item.index}`
+          `menu-icon${item.index}`,
         );
         menuBtn.classList.remove(
           'delete-icon',
           `delete-icon${item.index}`,
-          'fa-trash-can'
+          'fa-trash-can',
         );
       });
 
