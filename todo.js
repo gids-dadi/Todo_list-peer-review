@@ -20,8 +20,7 @@ function populate() {
     populate();
   }
 
-  
-  function addListener() {
+ function addListener() {
     const textField = document.querySelector('.add-text');
     textField.addEventListener('keypress', (e) => {
       const textValue = document.getElementById('add-text');
@@ -32,7 +31,7 @@ function populate() {
     });
   }
 
-  function deleteTask(id) {
+function deleteTask(id) {
     listContainer = listContainer.filter((item) => item.index !== id);
     localStorage.setItem('container', JSON.stringify(listContainer));
     populate();
@@ -51,8 +50,7 @@ function populate() {
       checkBox.addEventListener('click', () => {
         checkBox.classList.toggle('fa-square');
         checkBox.classList.toggle('fa-square-check');
-        listContainer[item.index].completed =
-          !listContainer[item.index].completed;
+        listContainer[item.index].completed = !listContainer[item.index].completed;
         localStorage.setItem('container', JSON.stringify(listContainer));
       });
       menuBtn.addEventListener('click', () => {
