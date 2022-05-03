@@ -67,13 +67,14 @@ function populate() {
             'delete-icon',
             `delete-icon${item.index}`,
             'fa-trash-can',
+          );
         } else {
           taskDisc.setAttribute('contenteditable', true);
           taskDisc.classList.add('yellowish');
           menuBtn.classList.remove(
             'menu-icon',
             'fa-ellipsis-vertical',
-            `menu-icon${item.index}`,
+            `menu-icon${item.index}`
           );
           menuBtn.classList.add(
             'delete-icon',
